@@ -1,5 +1,8 @@
 # CSC-122-WK3-Pointer-practice
 
+## Assignment and Dereferencing
+Write a program that asks the user to enter two integers to be stored in the variables a and b. 
+Assign the addresses of a and b to ptr_a and ptr_b. Then, print out the dereferenced values of ptr_a and ptr_b to the console.
 ## Background Information
 A pointer is a variable that stores a memory address. We use pointers in a myriad of ways when working in C++. 
 Thus, it is a good idea to get familiar with some basic operations on pointers.
