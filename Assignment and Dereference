@@ -1,0 +1,22 @@
+//9-8-26
+//Assignment and Dereference
+//Alexander W Kazantzis
+
+#include <iostream>
+
+int main() {
+    //user inputs 2 values
+    int a, b;
+    std::cout << "Enter two integers: ";
+    std::cin >> a >> b;
+    //Assign pointer to a
+    int* ptrA = &a;
+    //assign pointer to b
+    int* ptrB = &b;
+    //subtract the two values
+    int PntDiff = (*ptrA - *ptrB);
+    //display the result
+    std::cout << "The difference between the two values is: " << PntDiff << std::endl;
+    
+    return 0;
+}
