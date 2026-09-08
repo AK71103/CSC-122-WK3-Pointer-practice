@@ -1,0 +1,17 @@
+//9-8-26
+//Length of a C-String
+//Alexander W Kazantzis
+
+#include <iostream>
+#include <cstring>
+
+int main() {
+    //User inputs a C-string
+    char cString[100];
+    std::cout << "Enter a C-string: ";
+    std::cin.getline(cString, 100);
+    //use a pointer to find the length of the C-string
+    char* ptr = cString;
+    //display the length of the C-string
+    std::cout << "The length of the C-string is: " << std::strlen(ptr) << std::endl;
+}
