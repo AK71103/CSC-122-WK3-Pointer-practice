@@ -14,14 +14,20 @@ int main(){
     for(int i = 0; i < 10; i++){
         arr[i] = std::rand() % 100; //random number between 0 and 99
     }
+    //display the array
+    std::cout << "The array is: ";
+    for(int i = 0; i < 10; i++){
+        std::cout << arr[i] << " ";
+    }
+    std::cout << std::endl;
     // use a pointer to find the max value in the array
-    int MaxPtr = arr[0]; //initialize max pointer to first element
+    int* max_Ptr = &arr[0]; //initialize max pointer to first element
     for(int i = 1; i < 10; i++){
-        if(arr[i] > MaxPtr){
-            MaxPtr = arr[i]; //update max pointer if current element is greater
+        if(arr[i] > *max_Ptr){
+            max_Ptr = &arr[i]; //update max pointer if current element is greater
         }
     }
     //display the max value
-    std::cout << "The maximum value in the array is: " << MaxPtr << std::endl;
+    std::cout << "The maximum value in the array is: " << *max_Ptr << std::endl;
     return 0;
 }
