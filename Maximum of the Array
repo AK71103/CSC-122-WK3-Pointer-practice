@@ -1,0 +1,27 @@
+//9-9-26
+//Alexander W Kazantzis
+//Maximum of an array
+
+#include <iostream>
+#include <vector>
+#include <cstdlib> //for rand & srand
+#include <ctime> //for time
+int main(){
+    //intialize random seed
+    std::srand(static_cast<unsigned int>(std::time(nullptr)));
+    //create an array of random unsorted integers
+    int arr[10]; 
+    for(int i = 0; i < 10; i++){
+        arr[i] = std::rand() % 100; //random number between 0 and 99
+    }
+    // use a pointer to find the max value in the array
+    int MaxPtr = arr[0]; //initialize max pointer to first element
+    for(int i = 1; i < 10; i++){
+        if(arr[i] > MaxPtr){
+            MaxPtr = arr[i]; //update max pointer if current element is greater
+        }
+    }
+    //display the max value
+    std::cout << "The maximum value in the array is: " << MaxPtr << std::endl;
+    return 0;
+}
