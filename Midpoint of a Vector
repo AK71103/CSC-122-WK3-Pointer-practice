@@ -1,0 +1,32 @@
+//9-9-26
+//Alexander W Kazantzis
+//Midpoint of the vector
+
+#include <iostream>
+#include <vector>
+#include <cstdlib> //for rand & srand
+#include <ctime> //for time
+int main() {
+    //Create a vector of intergers
+    std::vector<int> vec;
+    //intialize random seed
+    std::srand(static_cast<unsigned int>(std::time(nullptr)));
+    //populate the vector with random unsorted integers
+    for (int i = 0; i < 20; i++) {
+        vec.push_back(std::rand() % 76); //random number between 0 and 75
+    }
+    //display the vector
+    std::cout << "The vector is: ";
+    for (int i = 0; i < vec.size(); i++) {
+        std::cout << vec[i] << " ";
+    }
+    //use a pointer to find the beginning of the vector
+    int* begin_ptr = &vec[0];
+    //use a pointer to find the end of the vector
+    int* end_ptr = &vec[vec.size() - 1];
+    //calculate the midpoint index
+    int midpoint = (end_ptr - begin_ptr) / 2;
+    //display the midpoint
+    std::cout << "The midpoint of the vector is: " << vec[midpoint] << std::endl;
+
+}
